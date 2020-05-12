@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>web_project</display-name>
+	<servlet>
+		<servlet-name>web_project</servlet-name>
+		<servlet-class>web_project.RequestDispatcher</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>RequestSelectUser</servlet-name>
+		<servlet-class>web_project.requests.RequestSelectUser</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>RequestSelectAllUser</servlet-name>
+		<servlet-class>web_project.requests.RequestSelectAllUser</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CreateUser</servlet-name>
+		<servlet-class>web_project.requests.CreateUser</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteUser</servlet-name>
+		<servlet-class>web_project.requests.DeleteUser</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>web_project</servlet-name>
+		<url-pattern>/RequestDispatcher/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RequestSelectUser</servlet-name>
+		<url-pattern>/RequestSelectUser/*</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>RequestSelectAllUser</servlet-name>
+		<url-pattern>/RequestSelectAllUser/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateUser</servlet-name>
+		<url-pattern>/CreateUser/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteUser</servlet-name>
+		<url-pattern>/DeleteUser/*</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>test_index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+
+<table id="htmlTable">
+
+</table>
+
+<button id="btn">create table</button>
+
+<script type="text/javascript">
+
+let obj = {
+    user_1: {surname: "klein", firstname: "marcel", streetAddress: "street", city: "bonn", zipCode: 76544},
+    user_2: {surname: "schulte", firstname: "thomas", streetAddress: "street", city: "bonn", zipCode: 34567},
+}
+
+
+
+document.getElementById('btn').addEventListener("click", () => {
+
+let selectTable = document.getElementById("htmlTable");
+
+for (var key in obj) {
+    var objLoop = obj[key];
+    let newRow = selectTable.insertRow(-1);
+
+    console.log(objLoop);
+
+    for (var prop in objLoop) {
+        let newCell = newRow.insertCell(0);
+        let newContent = document.createTextNode(objLoop[prop]);
+        newCell.appendChild(newContent);
+
+        console.log(prop + " = " + objLoop[prop]);
+    }
+}
+});
+
+
+</script>
+</body>
+</html>
+

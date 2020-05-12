@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>First assignment</title>
+
+<!-- Style sheets -->
+<link rel="stylesheet" type="text/css" href="createUserStyle.css">
+<link rel="stylesheet" type="text/css"
+	href="lib\bootstrap-4.3.1-dist/css\bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="lib\jquery-ui-1.12.1\jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="lib\croppie\croppie.css">
+
+
+</head>
+<body>
+	<!--Navbar-->
+	<nav class="navbar navbar-expand-lg" style="background-color: #EA0A8E;">
+		<a class="navbar-brand" href="interface.jsp">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="nav navbar-nav">
+				<li class="nav-item active"><a class="nav-link"
+					href="createNewUser.html">Create New User<span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!--Form-->
+	<div class="form-style-8">
+		<h2>Create new User</h2>
+		<form id="resetForm">
+			<input type="text" id="userInfoSurname" name="field1"
+				placeholder="Surname" /> <input type="text" id="userInfoFirstname"
+				name="field2" placeholder="Firstname" /> <input type="text"
+				id="userInfoAddress" name="field3" placeholder="Address" /> <input
+				type="text" id="userInfoCity" name="field4" placeholder="City" /> <input
+				type="text" id="userInfoZipcode" name="field5"
+				placeholder="Zip Code" />
+			<!--Image frame with upload function-->
+			<div>
+				<div>
+					<label class="cabinet center-block"> <!--Hides "Datei Auswählen" button inside the image-->
+						<img class="imgPlaceholder img-responsive img-thumbnail"
+						id="item-img-output" /> <!--Image result display on "item-img-output"-->
+						<input type="file" class="item-img file center-block"
+						name="file_photo" />
+					</label>
+					<div>
+					<!-- Hier Kamara FUnktion einbauen -->
+					<button id="takePicBtn" style="margin-left:100px;" >Take a phote (in progress)</button><br>
+					</div>
+				</div>
+		</form>
+	</div>
+	<input type="button" id="createArr" value="Submit"></input>
+	<!--        <input type="button" id="post-btn2" value="JSON to self made processor"></input> -->
+	</form>
+	</div>
+
+	<!--Dialog Body-->
+	<div id='dialog' style="display: none;">
+		<form>
+			<input id="curfield" type="text"></input><br></br>
+			<!--add RegEx if time-->
+		</form>
+	</div>
+
+	<!--Cropper Dialog-->
+	<div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div id="upload-demo" class="center-block"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Java/Jquery Script -->
+	<script type="text/javascript" src="lib\jquery\dist\jquery.js"></script>
+	<script type="text/javascript" src="lib\jquery-ui-1.12.1\jquery-ui.js"></script>
+	<script type="text/javascript" src="lib\bootstrap-4.3.1-dist/js\bootstrap.js"></script>
+	<script type="text/javascript" src="lib\croppie\croppie.js"></script>
+	<script type="text/javascript" src="lib/sweetalert/dist/sweetalert.min.js"></script>
+	<script type="text/javascript" src="javascriptJSON.js"></script>
+	<script type="text/javascript" src="createNewUserJavascript.js"></script>
+
+</body>
+</html>

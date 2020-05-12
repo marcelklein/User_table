@@ -1,0 +1,17 @@
+/*Navbar*/
+.nav.navbar-nav li a {
+	color: #fff;
+}
+
+.nav.navbar-nav a:hover {
+	color: grey;
+}
+
+/*beautify this pls*/
+/*try: https://codepen.io/nathancockerill/pen/OQyXWb*/
+.table {
+	width: 50%;
+	border: 1px;
+	border-spacing: 0px;
+	padding: 10px;
+}
